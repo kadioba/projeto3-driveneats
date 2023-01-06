@@ -22,14 +22,14 @@ function selecionarBebida(bebidaSelecionada){
 
 }
 
-function selecionarPrato(pratoSelecionado){
+function selecionarSobremesa(sobremesaSelecionada){
 
-    const pratoDesmarcar = document.querySelector(".pratos .selecionado");
+    const sobremesaDesmarcar = document.querySelector(".sobremesas .selecionado");
 
-    if (pratoDesmarcar !== null){
-        pratoDesmarcar.classList.remove("selecionado");
+    if (sobremesaDesmarcar !== null){
+        sobremesaDesmarcar.classList.remove("selecionado");
     }
 
-    pratoSelecionado.classList.add("selecionado");
+    sobremesaSelecionada.classList.add("selecionado");
 
 }
