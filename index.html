@@ -23,43 +23,43 @@
         <main>
             <h1>Primeiro, seu prato</h1>
             <div class="pratos">
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/camarao-crocante.webp" alt="Camarão Crocante">
                     <h2>Camarão Crocante</h2>
                     <p>Porção de camarão empanado crocante</p>
                     <h3>R$ 24,90</h3>
                 </div>
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/isca-de-tilapia.jpeg" alt="Isca de tilápia">
                     <h2>Isca de tilápia</h2>
                     <p>Isca de tilápia empanada</p>
                     <h3>R$ 22,50</h3>
                 </div>
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/moqueca-de-camarao.jpg" alt="Moqueca de camarão">
                     <h2>Moqueca de camarão</h2>
                     <p>Moqueca de camarão completa</p>
                     <h3>R$ 36,90</h3>
                 </div>
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/ostra.jpg" alt="Ostra ao limão">
                     <h2>Ostra ao Limão</h2>
                     <p>Porção de ostras ao limão</p>
                     <h3>R$ 44,90</h3>
                 </div>
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/polvo-do-chef.webp" alt="Polvo do chef">
                     <h2>Polvo do Chef</h2>
                     <p>Polvo na manteiga com linguini</p>
                     <h3>R$ 42,90</h3>
                 </div>
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/risoto-camarao.webp" alt="Risoto de camarão">
                     <h2>Risoto de Camarão</h2>
                     <p>Risoto de camarão com tempero andino</p>
                     <h3>R$ 27,90</h3>
                 </div>
-                <div>
+                <div onclick="selecionarPrato(this)">
                     <img src="./imagens/salmao-grelhado.jpg" alt="Salmão grelhado">
                     <h2>Salmão Grelhado</h2>
                     <p>Salvão selado ao molho de maracujá</p>
@@ -136,9 +136,27 @@
 
         <footer>
             <button>
-                Selecione os 3 itens para fechar o pedido
+                Selecione os 3 itens<br>para fechar o pedido
             </button>
         </footer>
+
+        <div class="confirmacao-do-pedido escondido">
+            <p>Confirme seu pedido</p>
+            <div>
+
+            </div>
+            <button>Tudo certo, pode pedir!</button>
+            <button>Cancelar</button>
+        </div>
+
     </div>
+
+    <!--Script da biblioteca de icones-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   
+    <!--Script de funcionamento do site-->
+    <script src="script.js"></script>
+
 </body>
 </html>
