@@ -1,4 +1,12 @@
-function selecionarPrato(pratoSelecionado, chkSelecionado){
+// Variaveis globais
+var prato;
+var precoPrato;
+var bebida;
+var precoBebida;
+var sobremesa;
+var precoSobremesa;
+
+function selecionarPrato(pratoSelecionado, nomePratoSelecionado, precoPratoSelecionado){
 
     const pratoDesmarcar = document.querySelector(".pratos .borda-selecionado");
 
@@ -7,9 +15,14 @@ function selecionarPrato(pratoSelecionado, chkSelecionado){
     }
 
     pratoSelecionado.classList.add("borda-selecionado");
+
+    prato = nomePratoSelecionado;
+    precoPrato = precoPratoSelecionado;
+    console.log(prato);
+    console.log(precoPrato);
 }
 
-function selecionarBebida(bebidaSelecionada){
+function selecionarBebida(bebidaSelecionada, nomeBebidaSelecionada, precoBebidaSelecionada){
 
     const bebidaDesmarcar = document.querySelector(".bebidas .borda-selecionado");
 
@@ -19,9 +32,14 @@ function selecionarBebida(bebidaSelecionada){
 
     bebidaSelecionada.classList.add("borda-selecionado");
 
+    bebida = nomeBebidaSelecionada;
+    precoBebida = precoBebidaSelecionada;
+    console.log(bebida);
+    console.log(precoBebida);
+
 }
 
-function selecionarSobremesa(sobremesaSelecionada){
+function selecionarSobremesa(sobremesaSelecionada, nomeSobremesaSelecionada, precoSobremesaSelecionada){
 
     const sobremesaDesmarcar = document.querySelector(".sobremesas .borda-selecionado");
 
@@ -31,4 +49,8 @@ function selecionarSobremesa(sobremesaSelecionada){
 
     sobremesaSelecionada.classList.add("borda-selecionado");
 
+    sobremesa = nomeSobremesaSelecionada;
+    precoSobremesa = precoSobremesaSelecionada;
+    console.log(sobremesa);
+    console.log(precoSobremesa);
 }
