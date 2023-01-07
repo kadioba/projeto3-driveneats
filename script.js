@@ -20,6 +20,8 @@ function selecionarPrato(pratoSelecionado, nomePratoSelecionado, precoPratoSelec
     precoPrato = precoPratoSelecionado;
     console.log(prato);
     console.log(precoPrato);
+
+    habilitarBotaoDePedido();
 }
 
 function selecionarBebida(bebidaSelecionada, nomeBebidaSelecionada, precoBebidaSelecionada){
@@ -37,6 +39,8 @@ function selecionarBebida(bebidaSelecionada, nomeBebidaSelecionada, precoBebidaS
     console.log(bebida);
     console.log(precoBebida);
 
+    habilitarBotaoDePedido();
+
 }
 
 function selecionarSobremesa(sobremesaSelecionada, nomeSobremesaSelecionada, precoSobremesaSelecionada){
@@ -53,4 +57,23 @@ function selecionarSobremesa(sobremesaSelecionada, nomeSobremesaSelecionada, pre
     precoSobremesa = precoSobremesaSelecionada;
     console.log(sobremesa);
     console.log(precoSobremesa);
+
+    habilitarBotaoDePedido();
+}
+
+function  habilitarBotaoDePedido(){
+    if (prato !== undefined){
+        if (sobremesa !== undefined){
+            if (bebida !== undefined){
+                const botaoPedido = document.querySelector(".botao-pedido");
+                botaoPedido.removeAttribute("disabled");
+                botaoPedido.classList.add("botao-ativo");
+                botaoPedido.innerHTML = 'Fechar pedido';
+            }
+        }
+    }
+}
+
+function realizarPedido(){
+    alert("teste");
 }
