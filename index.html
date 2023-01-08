@@ -152,7 +152,7 @@
         </main>
 
         <footer>
-            <button disabled onclick="realizarPedido()" class="botao-pedido">
+            <button disabled onclick="mostrarPedido()" class="botao-pedido">
                 Selecione os 3 itens<br>para fechar o pedido
             </button>
         </footer>
@@ -178,8 +178,8 @@
                     <h2 class="preco-total"></h2>
                 </div>
             </div>
-            <button class="finalizar-pedido">Tudo certo, pode pedir!</button>
-            <button class="cancelar-pedido">Cancelar</button>
+            <button class="finalizar-pedido" onclick="realizarPedido()" href="">Tudo certo, pode pedir!</button>
+            <button class="cancelar-pedido" onclick="cancelarPedido()">Cancelar</button>
         </div>
 
     </div>

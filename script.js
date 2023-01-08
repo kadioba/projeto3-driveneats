@@ -9,7 +9,10 @@ var sobremesa;
 var precoSobremesa;
 var precoSobremesaExibir;
 var precoTotal = 0;
-var precoTotalExibir
+var precoTotalExibir;
+var nomeCliente;
+var enderecoCliente;
+var mensagemPedido;
 
 function selecionarPrato(pratoSelecionado, nomePratoSelecionado, precoPratoSelecionado){
 
@@ -95,7 +98,10 @@ function  habilitarBotaoDePedido(){
     }
 }
 
-function realizarPedido(){
+function mostrarPedido(){
+
+    nomeCliente = prompt("Digite seu nome:");
+    enderecoCliente = prompt("Digite seu endereço:")
 
     precoTotalExibir = precoTotal.toFixed(2).replaceAll('.',',');
 
@@ -121,4 +127,24 @@ function realizarPedido(){
 
     const precoTotalConfirmado = document.querySelector(".preco-total");
     precoTotalConfirmado.innerHTML = "R$ " + precoTotalExibir;
+}
+
+function realizarPedido(){
+    mensagemPedido = `
+    Olá, gostaira de fazer o pedido:
+    - Prato: ${prato}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: R$ ${precoTotal.toFixed(2)}
+    
+    Nome: ${nomeCliente}
+    Endereço: ${enderecoCliente}`;
+
+    const numeroRestaurante = 45999685167;
+
+    window.location.href = `https://wa.me/${numeroRestaurante}?text=${encodeURIComponent(mensagemPedido)}`;
+}
+
+function cancelarPedido(){
+    document.querySelector(".tela-verificacao").classList.add("escondido");
 }
