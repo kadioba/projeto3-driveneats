@@ -343,7 +343,7 @@ footer button{
 
 .conteudo-pedido h2{
     font-family: 'Roboto', sans-serif;
-    font-weight: 000;
+    font-weight: 700;
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
@@ -358,6 +358,14 @@ footer button{
 .confirmacao-do-pedido button{
     display: block;
     border: none;
+}
+
+.confirmacao-do-pedido h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
 }
 
 .finalizar-pedido{
