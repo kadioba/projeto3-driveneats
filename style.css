@@ -12,6 +12,7 @@ header{
     position: fixed;
     top: 0px;
     z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 header h1{
@@ -315,6 +316,7 @@ footer button{
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
 }
 
 .confirmacao-do-pedido h1{
@@ -416,4 +418,25 @@ footer button{
 
 .borda-selecionado :nth-child(5){
     display: block;
+}
+
+/* Media Querry para tirar a scrollbar de dispositivos mobile (tablets e celulares)*/
+
+@media (max-width: 1024px){
+    .pratos::-webkit-scrollbar{
+        display: none;
+    }
+
+    .bebidas::-webkit-scrollbar{
+        display: none;
+    }
+
+    .sobremesas::-webkit-scrollbar{
+        display: none;
+    }
+
+    .pratos, .bebidas, .sobremesas{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
