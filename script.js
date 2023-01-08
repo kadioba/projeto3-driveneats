@@ -5,6 +5,7 @@ var bebida;
 var precoBebida;
 var sobremesa;
 var precoSobremesa;
+var precoTotal = 0;
 
 function selecionarPrato(pratoSelecionado, nomePratoSelecionado, precoPratoSelecionado){
 
@@ -12,14 +13,17 @@ function selecionarPrato(pratoSelecionado, nomePratoSelecionado, precoPratoSelec
 
     if (pratoDesmarcar !== null){
         pratoDesmarcar.classList.remove("borda-selecionado");
+
+        precoTotal = precoTotal - precoPrato;
     }
 
     pratoSelecionado.classList.add("borda-selecionado");
 
     prato = nomePratoSelecionado;
     precoPrato = precoPratoSelecionado;
-    console.log(prato);
-    console.log(precoPrato);
+
+    precoTotal += precoPrato;
+    console.log(precoTotal);
 
     habilitarBotaoDePedido();
 }
@@ -30,14 +34,17 @@ function selecionarBebida(bebidaSelecionada, nomeBebidaSelecionada, precoBebidaS
 
     if (bebidaDesmarcar !== null){
         bebidaDesmarcar.classList.remove("borda-selecionado");
+
+        precoTotal = precoTotal - precoBebida;
     }
 
     bebidaSelecionada.classList.add("borda-selecionado");
 
     bebida = nomeBebidaSelecionada;
     precoBebida = precoBebidaSelecionada;
-    console.log(bebida);
-    console.log(precoBebida);
+
+    precoTotal += precoBebida;
+    console.log(precoTotal);
 
     habilitarBotaoDePedido();
 
@@ -49,14 +56,17 @@ function selecionarSobremesa(sobremesaSelecionada, nomeSobremesaSelecionada, pre
 
     if (sobremesaDesmarcar !== null){
         sobremesaDesmarcar.classList.remove("borda-selecionado");
+
+        precoTotal = precoTotal - precoSobremesa;
     }
 
     sobremesaSelecionada.classList.add("borda-selecionado");
 
     sobremesa = nomeSobremesaSelecionada;
     precoSobremesa = precoSobremesaSelecionada;
-    console.log(sobremesa);
-    console.log(precoSobremesa);
+
+    precoTotal += precoSobremesa;
+    console.log(precoTotal);
 
     habilitarBotaoDePedido();
 }
@@ -75,5 +85,27 @@ function  habilitarBotaoDePedido(){
 }
 
 function realizarPedido(){
-    alert("teste");
+
+    document.querySelector(".confirmacao-do-pedido").classList.remove("escondido");
+
+    const pratoConfirmado = document.querySelector(".prato-confirmado");
+    pratoConfirmado.innerHTML = prato;
+    
+    const precoPratoConfirmado = document.querySelector(".preco-prato-confirmado");
+    precoPratoConfirmado.innerHTML = "R$ " + precoPrato;
+
+    const bebidaConfirmada = document.querySelector(".bebida-confirmada");
+    bebidaConfirmada.innerHTML = bebida;
+    
+    const precoBebidaConfirmada = document.querySelector(".preco-bebida-confirmada");
+    precoBebidaConfirmada.innerHTML = "R$ " + precoBebida;
+
+    const sobremesaConfirmada = document.querySelector(".sobremesa-confirmada");
+    sobremesaConfirmada.innerHTML = sobremesa;
+    
+    const precoSobremesaConfirmada = document.querySelector(".preco-sobremesa-confirmada");
+    precoSobremesaConfirmada.innerHTML = "R$ " + precoSobremesa;
+
+    const precoTotalConfirmado = document.querySelector(".preco-total");
+    precoTotalConfirmado.innerHTML = "R$ " + precoTotal;
 }
