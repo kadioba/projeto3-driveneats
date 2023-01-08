@@ -86,7 +86,7 @@ function  habilitarBotaoDePedido(){
 
 function realizarPedido(){
 
-    document.querySelector(".confirmacao-do-pedido").classList.remove("escondido");
+    document.querySelector(".tela-verificacao").classList.remove("escondido");
 
     const pratoConfirmado = document.querySelector(".prato-confirmado");
     pratoConfirmado.innerHTML = prato;
