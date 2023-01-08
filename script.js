@@ -135,7 +135,7 @@ function realizarPedido(){
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
-    Total: R$ ${precoTotal.toFixed(2)}
+    Total: R$ ${precoTotal}
     
     Nome: ${nomeCliente}
     Endereço: ${enderecoCliente}`;
