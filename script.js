@@ -14,22 +14,25 @@ var nomeCliente;
 var enderecoCliente;
 var mensagemPedido;
 
+const bordaSelecionada = "borda-selecionado";
+const correcaoCasasDecimais = 2;
+
 function selecionarPrato(pratoSelecionado, nomePratoSelecionado, precoPratoSelecionado){
 
     const pratoDesmarcar = document.querySelector(".pratos .borda-selecionado");
 
     if (pratoDesmarcar !== null){
         if(pratoDesmarcar !== pratoSelecionado){
-            pratoDesmarcar.classList.remove("borda-selecionado");
+            pratoDesmarcar.classList.remove(bordaSelecionada);
         }
         precoTotal = precoTotal - precoPrato;
     }
 
-    pratoSelecionado.classList.add("borda-selecionado");
+    pratoSelecionado.classList.add(bordaSelecionada);
 
     prato = nomePratoSelecionado;
     precoPrato = Number(precoPratoSelecionado);
-    precoPratoExibir =  precoPratoSelecionado.toFixed(2).replaceAll('.',',');
+    precoPratoExibir =  precoPratoSelecionado.toFixed(correcaoCasasDecimais).replaceAll('.',',');
 
     precoTotal += precoPrato;
     console.log(precoTotal);
@@ -43,16 +46,16 @@ function selecionarBebida(bebidaSelecionada, nomeBebidaSelecionada, precoBebidaS
 
     if (bebidaDesmarcar !== null){
         if(bebidaDesmarcar !== bebidaSelecionada){
-            bebidaDesmarcar.classList.remove("borda-selecionado");
+            bebidaDesmarcar.classList.remove(bordaSelecionada);
         }
         precoTotal = precoTotal - precoBebida;
     }
 
-    bebidaSelecionada.classList.add("borda-selecionado");
+    bebidaSelecionada.classList.add(bordaSelecionada);
 
     bebida = nomeBebidaSelecionada;
     precoBebida = Number(precoBebidaSelecionada);
-    precoBebidaExibir = precoBebidaSelecionada.toFixed(2).replaceAll('.',',');
+    precoBebidaExibir = precoBebidaSelecionada.toFixed(correcaoCasasDecimais).replaceAll('.',',');
 
     precoTotal += precoBebida;
     console.log(precoTotal);
@@ -67,17 +70,17 @@ function selecionarSobremesa(sobremesaSelecionada, nomeSobremesaSelecionada, pre
 
     if (sobremesaDesmarcar !== null){
         if(sobremesaDesmarcar !== sobremesaSelecionada){
-            sobremesaDesmarcar.classList.remove("borda-selecionado");
+            sobremesaDesmarcar.classList.remove(bordaSelecionada);
         }
 
         precoTotal = precoTotal - precoSobremesa;
     }
 
-    sobremesaSelecionada.classList.add("borda-selecionado");
+    sobremesaSelecionada.classList.add(bordaSelecionada);
 
     sobremesa = nomeSobremesaSelecionada;
     precoSobremesa = Number(precoSobremesaSelecionada);
-    precoSobremesaExibir = precoSobremesaSelecionada.toFixed(2).replaceAll('.',',');
+    precoSobremesaExibir = precoSobremesaSelecionada.toFixed(correcaoCasasDecimais).replaceAll('.',',');
 
     precoTotal += precoSobremesa;
     console.log(precoTotal);
@@ -86,15 +89,11 @@ function selecionarSobremesa(sobremesaSelecionada, nomeSobremesaSelecionada, pre
 }
 
 function  habilitarBotaoDePedido(){
-    if (prato !== undefined){
-        if (sobremesa !== undefined){
-            if (bebida !== undefined){
-                const botaoPedido = document.querySelector(".botao-pedido");
-                botaoPedido.removeAttribute("disabled");
-                botaoPedido.classList.add("botao-ativo");
-                botaoPedido.innerHTML = 'Fechar pedido';
-            }
-        }
+    if (prato !== undefined && sobremesa !== undefined && bebida !== undefined){
+        const botaoPedido = document.querySelector(".botao-pedido");
+        botaoPedido.removeAttribute("disabled");
+        botaoPedido.classList.add("botao-ativo");
+        botaoPedido.innerHTML = 'Fechar pedido';
     }
 }
 
@@ -103,7 +102,7 @@ function mostrarPedido(){
     nomeCliente = prompt("Digite seu nome:");
     enderecoCliente = prompt("Digite seu endereço:")
 
-    precoTotalExibir = precoTotal.toFixed(2).replaceAll('.',',');
+    precoTotalExibir = precoTotal.toFixed(correcaoCasasDecimais).replaceAll('.',',');
 
     document.querySelector(".tela-verificacao").classList.remove("escondido");
 
@@ -135,7 +134,7 @@ function realizarPedido(){
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
-    Total: R$ ${precoTotal.toFixed(2)}
+    Total: R$ ${precoTotal.toFixed(correcaoCasasDecimais)}
     
     Nome: ${nomeCliente}
     Endereço: ${enderecoCliente}`;

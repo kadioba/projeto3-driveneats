@@ -322,6 +322,11 @@ footer button{
 .confirmacao-do-pedido h1{
     margin-top: 22px;
     margin-bottom: 27px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
 }
 
 .conteudo-pedido{
@@ -360,14 +365,6 @@ footer button{
 .confirmacao-do-pedido button{
     display: block;
     border: none;
-}
-
-.confirmacao-do-pedido h1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-    color: #FFFFFF;
 }
 
 .finalizar-pedido{
@@ -423,6 +420,11 @@ footer button{
 /* Media Querry para tirar a scrollbar de dispositivos mobile (tablets e celulares)*/
 
 @media (max-width: 1024px){
+    .pratos, .bebidas, .sobremesas{
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
     .pratos::-webkit-scrollbar{
         display: none;
     }
@@ -433,10 +435,5 @@ footer button{
 
     .sobremesas::-webkit-scrollbar{
         display: none;
-    }
-
-    .pratos, .bebidas, .sobremesas{
-        -ms-overflow-style: none;
-        scrollbar-width: none;
     }
 }
