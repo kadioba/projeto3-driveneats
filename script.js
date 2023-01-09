@@ -108,19 +108,19 @@ function mostrarPedido(){
 
     const pratoConfirmado = document.querySelector(".prato-confirmado");
     pratoConfirmado.innerHTML = prato;
-    
+
     const precoPratoConfirmado = document.querySelector(".preco-prato-confirmado");
     precoPratoConfirmado.innerHTML = "R$ " + precoPratoExibir;
 
     const bebidaConfirmada = document.querySelector(".bebida-confirmada");
     bebidaConfirmada.innerHTML = bebida;
-    
+
     const precoBebidaConfirmada = document.querySelector(".preco-bebida-confirmada");
     precoBebidaConfirmada.innerHTML = "R$ " + precoBebidaExibir;
 
     const sobremesaConfirmada = document.querySelector(".sobremesa-confirmada");
     sobremesaConfirmada.innerHTML = sobremesa;
-    
+
     const precoSobremesaConfirmada = document.querySelector(".preco-sobremesa-confirmada");
     precoSobremesaConfirmada.innerHTML = "R$ " + precoSobremesaExibir;
 
