@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DriveEats</title>
 
-    <!--Link dos arquivos de CSS-->
+    <!-- Link dos arquivos de CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 
-    <!--Link fontes Righteous e Roboto-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    
+    <!-- Link fontes Righteous e Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">    
+
+    <!-- Link do favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -177,17 +183,21 @@
                     <h2 class="preco-total"></h2>
                 </div>
             </div>
-            <button data-test="confirm-order-btn" class="finalizar-pedido" onclick="realizarPedido()" href="">Tudo certo, pode pedir!</button>
-            <button data-test="cancel-order-btn" class="cancelar-pedido" onclick="cancelarPedido()">Cancelar</button>
+            <button data-test="confirm-order-btn" class="finalizar-pedido" onclick="realizarPedido()" href="">
+                Tudo certo, pode pedir!
+            </button>
+            <button data-test="cancel-order-btn" class="cancelar-pedido" onclick="cancelarPedido()">
+                Cancelar
+            </button>
         </div>
 
     </div>
 
-    <!--Script da biblioteca de icones-->
+    <!-- Script da biblioteca de icones -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    
-    <!--Script de funcionamento do site-->
+    <!-- Script de funcionamento do site -->
     <script src="script.js"></script>
 
 </body>
